@@ -89,7 +89,12 @@ fn main() {
 
     // pad the output with a specific character
     // notice how we can specify the pad the output with a specific character in the println! macro
-    println!("{:0>10}", 1)
+    println!("{:0>10}", 1);
+
+    // you can directly use the variable names in the println! macro
+    // notice how we can directly use the variable names in the println! macro
+    let name = "Alice";
+    println!("{name}");
 
 
     // to compile and run this program, use the following command:
@@ -108,5 +113,6 @@ fn main() {
     //      Alice
     // Alice
     // 0000000001
+    // Alice
 
 }
