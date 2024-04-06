@@ -6,10 +6,10 @@
 // reverse() is a function that takes a tuple of two values and returns a tuple with the values reversed.
 fn reverse(pair: (i32, bool)) -> (bool, i32) {
     // we can use two variables to store the values of the tuple
-    let (i32 integer, bool boolean) = pair;
+    let (integer, boolean) = pair;
 
     // we can also return a tuple directly, below is the shortened version of "return (boolean, integer);" 
-    (boolean, integer);
+    (boolean, integer)
 }
 
 fn main() {
@@ -29,7 +29,7 @@ fn main() {
     println!("First element of the nested tuple: {:?}", nested_tuple.0);
 
     // printing value of first element of the first element of the nested tuple
-    println!("First element of the first element of the nested tuple: {}", (nested_tuple.0).0));
+    println!("First element of the first element of the nested tuple: {}", (nested_tuple.0).0);
 
     // but very_long_tuples more than 12 elements are not allowed
     // let very_long_tuple = (1u8, 2u16, 3u32, 4u64, -1i8, -2i16, -3i32, -4i64, 0.1f32, 0.2f64, true, false, 'a', "Hello, World!", 13u8);
@@ -61,12 +61,12 @@ fn main() {
     let (a, b, c, d) = tuple;
     println!("{}, {}, {}, {}", a, b, c, d);
 
-    let matrix = Matrix(1.1, 1.2, 2.1, 2.2);
+    let matrix = (1.1, 1.2, 2.1, 2.2);
     println!("{:?}", matrix);
 
     // transpose the matrix
-    println!("Matrix:\n{}", matrix);
-    println!("Transpose:\n{}", transpose(matrix));
+    println!("Matrix:\n{:?}", matrix);
+    println!("Transpose:\n{:?}", transpose(matrix));
 }
 
 // activity problem 1 
