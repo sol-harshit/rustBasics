@@ -14,6 +14,25 @@ enum WebEvent {
     KeyPress(char, i32),
 }
 
+// enum with alias
+enum SumSubEnum {
+    Add, 
+    Substract,
+}
+
+
+// impl block to define methods on an enum
+impl SumSubEnum {
+    fn run(&self, x: i32, y: i32) -> i32 {
+        match self {
+            SumSubEnum::Add => x + y,
+            SumSubEnum::Substract => x - y,
+        }
+    }
+}
+
+type Sum = SumSubEnum;
+
 // a function which takes WebEvent enum as an argument amd 
 // returns nothing
 
@@ -43,4 +62,12 @@ fn main() {
     inspect(load);
     inspect(unload);
 
+    let x = Sum::Add;
+    let y = Sum::Substract;
+    println!("Sum of 3 and 4 is {}", x.run(3, 4));  
+    println!("Substraction of 3 and 4 is {}", y.run(4, 3));
+
+
 }
+
+
